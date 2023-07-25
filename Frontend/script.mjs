@@ -27,14 +27,18 @@ const getData = () => {
       });
   };
 
-  const inputforms = document.getElementById("inputforms");
-inputforms.addEventListener("submit", (event) => {
-  event.preventDefault();
+  const addButton = document.getElementById("add");
+  addButton.addEventListener("click", () => {
+  const name = document.getElementById("name").value;
+  const price = document.getElementById("price").value;
+  const quantity = document.getElementById("quantity").value;
+  const description = document.getElementById("description").value;
+
   axios.post("https://tan-alert-gopher.cyclic.app/product", {
-    name: document.getElementById("name").value,
-    price: document.getElementById("price").value,
-    quantity: document.getElementById("quantity").value,
-    description: document.getElementById("description").value,
+    name: name,
+    price: price,
+    quantity: quantity,
+    description: description,
   })
     .then((res) => {
       console.log(res);
@@ -46,4 +50,5 @@ inputforms.addEventListener("submit", (event) => {
       alert("Error adding product");
     });
 });
+
 getData();
