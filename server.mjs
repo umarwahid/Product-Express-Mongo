@@ -6,9 +6,6 @@ import { MongoClient } from "mongodb"
 
 
 import './config/index.mjs'
-console.log("dfdf",process.env.MONGODB_USERNAME);
-console.log("dfdf",process.env.MONGODB_PASSWORD);
-
 
 const mongodbURI = `mongodb+srv://dbusername:dbpassword@cluster0.bn8froi.mongodb.net/?retryWrites=true&w=majority`
 const client = new MongoClient(mongodbURI, { useNewUrlParser: true, useUnifiedTopology: true });
