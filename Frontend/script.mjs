@@ -1,6 +1,6 @@
 const tableBody = document.getElementById("tableBody");
 const getData = () => {
-    axios.get("https://rich-erin-bison-tie.cyclic.app/products")
+    axios.get("https://tan-alert-gopher.cyclic.app/products")
     .then((res)=> {
         const data = res.data.data;
         tableBody.innerHTML = "";
@@ -30,7 +30,7 @@ const getData = () => {
   const inputforms = document.getElementById("inputforms");
 inputforms.addEventListener("submit", (event) => {
   event.preventDefault();
-  axios.post("https://rich-erin-bison-tie.cyclic.app/product", {
+  axios.post("https://tan-alert-gopher.cyclic.app/product", {
     name: document.getElementById("name").value,
     price: document.getElementById("price").value,
     quantity: document.getElementById("quantity").value,
