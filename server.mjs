@@ -10,7 +10,7 @@ console.log("dfdf",process.env.MONGODB_USERNAME);
 console.log("dfdf",process.env.MONGODB_PASSWORD);
 
 
-const mongodbURI = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.bn8froi.mongodb.net/?retryWrites=true&w=majority`
+const mongodbURI = `mongodb+srv://dbusername:dbpassword@cluster0.bn8froi.mongodb.net/?retryWrites=true&w=majority`
 const client = new MongoClient(mongodbURI, { useNewUrlParser: true, useUnifiedTopology: true });
 const database = client.db('product');
 const productsCollection = database.collection('products');
