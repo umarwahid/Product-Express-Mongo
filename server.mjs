@@ -36,7 +36,7 @@ app.get("/products", async (req, res) => {
   const productsCollection = database.collection('products');
 
   const query = {}
-  const findproducts = await productsCollection.find(query);
+  const findproducts = await productsCollection.find(query).toArray();
   await client.close();
 
   res.send({
