@@ -97,8 +97,8 @@ app.post("/product", async (req, res) => {
       return;
     }
   
-    try {
-      const productsCollection = getDatabase().collection("products");
+    // try {
+      // const productsCollection = getDatabase().collection("products");
       const product = {
         name,
         price,
@@ -106,10 +106,10 @@ app.post("/product", async (req, res) => {
       };
       await productsCollection.insertOne(product);
       res.status(201).send({ message: "Product Created" });
-    } catch (error) {
-      console.error("Error adding product:", error);
-      res.status(500).send("Error adding product.");
-    }
+    // } catch (error) {
+    //   console.error("Error adding product:", error);
+    //   res.status(500).send("Error adding product.");
+    // }
   });
   
 
