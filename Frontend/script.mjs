@@ -27,29 +27,29 @@
 //       });
 //   };
 
-//   const addButton = document.getElementById("add");
-//   addButton.addEventListener("click", () => {
-//   const name = document.getElementById("name").value;
-//   const price = document.getElementById("price").value;
-//   const quantity = document.getElementById("quantity").value;
-//   const description = document.getElementById("description").value;
+  const addButton = document.getElementById("add");
+  addButton.addEventListener("click", () => {
+  const name = document.getElementById("name").value;
+  const price = document.getElementById("price").value;
+  const quantity = document.getElementById("quantity").value;
+  const description = document.getElementById("description").value;
 
-//   axios.post("https://tan-alert-gopher.cyclic.app/product", {
-//     name: name,
-//     price: price,
-//     quantity: quantity,
-//     description: description,
-//   })
-//     .then((res) => {
-//       console.log(res);
-//       alert("Product Added");
-//       getData();
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//       alert("Error adding product");
-//     });
-// });
+  axios.post("https://tan-alert-gopher.cyclic.app/product", {
+    name: name,
+    price: price,
+    quantity: quantity,
+    description: description,
+  })
+    .then((res) => {
+      console.log(res);
+      alert("Product Added");
+      getData();
+    })
+    .catch((err) => {
+      console.log(err);
+      alert("Error adding product");
+    });
+});
 
 // getData();
 
